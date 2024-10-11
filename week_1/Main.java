@@ -18,7 +18,7 @@ import java.lang.StringBuilder;
  * Output
  * 12
  */
-public class WORD_COUNT {
+public class Main {
     public static void main(String[] args) throws Exception {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringBuilder input = new StringBuilder();
@@ -26,13 +26,8 @@ public class WORD_COUNT {
         while ((line = br.readLine()) != null){
             input.append(line).append(" ");
         }
-        int wordCount = 0;
-        for (int i = 0; i < input.length(); i++){
-            if (input.charAt(i) == ' ' || input.charAt(i) == '\t' || input.charAt(i) == '\n'){
-                wordCount++;
-            }
-        }
-
-        System.out.println(wordCount);
+        String[] words = input.toString().trim().split("\\s+");
+        int wordsCount = words.length == 1 && words[0].isEmpty() ? 0 : words.length;
+        System.out.println(wordsCount);
     }
 }
