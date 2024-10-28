@@ -31,11 +31,9 @@ import java.io.InputStreamReader;
  * 179
  * 924
  */
-class Hash{
 
-}
 public class hash_over_string {
-    public static void main(String[] args) throws Exception{
+    public static void main() throws Exception{
         BufferedReader br = new BufferedReader((new InputStreamReader(System.in)));
         String[] line = br.readLine().split(" ");
         int n = Integer.parseInt(line[0]);
